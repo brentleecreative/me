@@ -55,4 +55,53 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // --- Lightbox / Image Popup Logic ---
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const galleryImages = document.querySelectorAll('.project-gallery img');
+
+  const openLightbox = (img) => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = img.alt;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    body.style.overflow = ''; // Restore background scrolling
+    setTimeout(() => {
+      if (!lightbox.classList.contains('active')) {
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+        lightboxCaption.textContent = '';
+      }
+    }, 300);
+  };
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => openLightbox(img));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  // Close lightbox on clicking the background overlay
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Close lightbox on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+
 });
