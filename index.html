@@ -4,196 +4,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brent Lee | Mechanical Engineering Portfolio</title>
+  <title>Brent Lee | Who Are You?</title>
   <meta name="description"
-    content="Portfolio of Brent Lee, a thoughtful and creative mechanical engineering student at CSUF focusing on sustainable systems and human-centered design.">
+    content="Personal website of Brent Lee - exploring identity, crochet art, and mechanical engineering.">
+
+  <!-- Source Sans Pro / Source Sans 3 Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&display=swap"
     rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="light">
 
-  <nav class="navbar">
-    <div class="nav-content">
-      <div class="logo">Brent Lee.</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+  <!-- Subtle Shooting Lines Background Animation -->
+  <div class="shooting-lines-bg" aria-hidden="true">
+    <div class="shooting-line line-1"></div>
+    <div class="shooting-line line-2"></div>
+    <div class="shooting-line line-3"></div>
+    <div class="shooting-line line-4"></div>
+    <div class="shooting-line line-5"></div>
+    <div class="shooting-line line-6"></div>
+    <div class="shooting-line line-7"></div>
+    <div class="shooting-line line-8"></div>
+    <div class="shooting-line line-9"></div>
+    <div class="shooting-line line-10"></div>
+  </div>
+
+  <!-- Intro Animation Overlay -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-stage">
+      <div class="intro-meme-card" id="intro-meme-card">
+        <img src="dog.JPG" alt="Meme Dog Opening" id="intro-meme-img">
       </div>
-      <button id="theme-toggle" aria-label="Toggle Dark Mode">
-        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="theme-icon hidden">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      </button>
+      <h1 class="intro-question" id="intro-question">Who are you?</h1>
     </div>
-  </nav>
+    <button id="skip-intro" class="skip-intro-btn" aria-label="Skip animation">Skip &rarr;</button>
+  </div>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container animate-on-scroll hero-split">
-        <div class="hero-text-content">
-          <p class="overline">Renton, Washington</p>
-          <h1 class="hero-title">Engineering for a <span class="accent-text">sustainable</span><br>future.</h1>
-          <p class="hero-subtitle">Hello! My name is Brent Lee and I'm an engineer with a focus
-            on sustainability and renewable energy. I currently serve as an Energy Engineer with
-            Apollo Mechanical Contractors in Renton, Washington. We help building owners upgrade
-            their HVAC systems to be safer, efficient, and more comfortable for workers and visitors.
-            Although I love it here in Washington, I'm originally from Sacramento, California. On my
-            free time, you might find me reading a book from the local library, crocheting small
-            keychains for friends, or cooking healthy meals at home. Thanks for visiting my website!
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View My Projects</a>
-            <a href="#about" class="btn btn-secondary">More About Me</a>
-          </div>
-        </div>
-        <div class="hero-image-content">
-          <img src="Christmas2025_2.jpg" alt="Brent Lee Profile Picture" class="profile-pic">
-        </div>
+  <!-- Floating Theme Toggle -->
+  <div class="theme-toggle-wrapper">
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+      <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </div>
+
+  <main class="page-container">
+
+    <!-- Top Bold Red Question -->
+    <header class="header-section">
+      <h1 class="main-question" id="main-question">Who are you?</h1>
+    </header>
+
+    <!-- Section 1: Intro / Alien Question -->
+    <section class="narrative-section">
+      <p class="narrative-text">
+        If an alien asked you this question, would you know how to answer? My work explores identity and the things that
+        make us human. Through crochet, I build small totem plushies that celebrate the family and friends I hold close.
+        My hope is that self awareness and celebration of our differences can build a stronger sense of belonging in our
+        everyday communities.
+      </p>
+
+      <div class="featured-image-wrapper">
+        <img src="dog2.JPG" alt="Dog companion exploring identity" class="featured-image">
       </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-      </div>
+
+      <p class="narrative-text">
+        My first identity was artist. Since the moment I learned to draw a horse, paint with watercolor, or perform in
+        the school play, I had always been drawn to art and self expression. This passion has since materialized in
+        knitted scarves, music, acrylic paintings, and now crochet.
+      </p>
     </section>
 
-    <section id="quote" class="quote-section">
-      <div class="container animate-on-scroll">
-        <blockquote class="manifesto-quote">
-          "Scientists study the world as it is, engineers create the world that never has been" <br><span
-            class="quote-author">Theodore von Karman</span>
-        </blockquote>
-      </div>
-    </section>
+    <!-- Section 2: Carousel of Art & Crochet -->
+    <section class="carousel-section">
+      <div class="carousel-container">
+        <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Previous Image">&#10094;</button>
 
-    <section id="about" class="about">
-      <div class="container animate-on-scroll">
-        <div class="section-header">
-          <h2>About Me</h2>
-          <div class="line"></div>
-        </div>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>I started my journey at Cosumnes River College in 2020 before transferring to
-              California State University, Fullerton in early 2024. As a recent graduate from
-              California State University, Fullerton with a Bachelors of Science in Mechanical
-              Engineering, I've learned the importance of building friendships with those
-              around me and having laser focus on personal goals. From my coursework, I've gained
-              leadership experience as team lead in projects such as the Smith Machine CAD design
-              and the Solid-State Hydrogen-Powered Speedboat. I've also learned professional
-              skills as secretary for Tau Beta Pi Engineering Honor Society and as a mentee through
-              Big Brothers Big Sisters of Orange County. Outside of classes, I like to crochet gift
-              keychains, perform with the school mariachi, read books, and cook healthy meals at home.
-              Since graduating in May 2026, I have accepted a full-time role as Energy Engineer at
-              Apollo Mechanical Contractors based in Renton, Washington. My next goal is to pass the
-              Fundamentals of Engineering exam and make my way to become a Professional Engineer.
-            </p>
-
-            <div class="values-list">
-              <div class="value-item">
-                <span class="value-icon">🌱</span>
-                <strong>Growth</strong>
-                <span>A lifetime of learning can take you far.</span>
-              </div>
-              <div class="value-item">
-                <span class="value-icon">🤝</span>
-                <strong>Empathy</strong>
-                <span>Community is all we have.</span>
-              </div>
-              <div class="value-item">
-                <span class="value-icon">🍎</span>
-                <strong>Health</strong>
-                <span>Take care of yourself so you can help others.</span>
-              </div>
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-slide" data-index="0">
+              <img src="painting.jpg" alt="Painting artwork 1">
             </div>
-          </div>
-          <div class="skills-card">
-            <h3>Technical Toolkit</h3>
-            <div class="skill-category">
-              <h4>Engineering Tools</h4>
-              <div class="skill-tags">
-                <span class="tag">SolidWorks</span>
-                <span class="tag">AutoCAD</span>
-                <span class="tag">Inventor</span>
-                <span class="tag">Revit</span>
-              </div>
+            <div class="carousel-slide" data-index="1">
+              <img src="painting2.jpg" alt="Painting artwork 2">
             </div>
-            <div class="skill-category">
-              <h4>Analysis & Simulation</h4>
-              <div class="skill-tags">
-                <span class="tag">MATLAB</span>
-                <span class="tag">Simulink</span>
-              </div>
+            <div class="carousel-slide" data-index="2">
+              <img src="crochet.jpg" alt="Handmade crochet creation 1">
             </div>
-            <div class="skill-category">
-              <h4>Documentation & Other</h4>
-              <div class="skill-tags">
-                <span class="tag">Technical Writing</span>
-                <span class="tag">ASME Y14.5 & GD&T</span>
-                <span class="tag">Microsoft Office Suite</span>
-              </div>
+            <div class="carousel-slide" data-index="3">
+              <img src="crochet2.jpg" alt="Handmade crochet creation 2">
+            </div>
+            <div class="carousel-slide" data-index="4">
+              <img src="crochet3.jpg" alt="Handmade crochet creation 3">
+            </div>
+            <div class="carousel-slide" data-index="5">
+              <img src="crochet4.jpg" alt="Handmade crochet creation 4">
             </div>
           </div>
         </div>
+
+        <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Next Image">&#10095;</button>
+      </div>
+
+      <div class="carousel-indicators" id="carousel-indicators"></div>
+
+      <div class="see-more-container">
+        <button id="open-gallery-btn" class="see-more-link">Click to see more &rarr;</button>
       </div>
     </section>
 
-    <section id="projects" class="projects">
-      <div class="container animate-on-scroll">
-        <div class="section-header">
-          <h2>Engineering Projects</h2>
-          <div class="line"></div>
-        </div>
+    <!-- Section 3: Engineering Identity -->
+    <section class="narrative-section">
+      <div class="featured-image-wrapper">
+        <img src="engineer.jpg" alt="Engineering and HVAC systems" class="featured-image">
+      </div>
+
+      <p class="narrative-text">
+        My second identity is engineer. As a recent graduate in mechanical engineering, I’m proud to be working in HVAC
+        to help communities save energy and lower costs. The fight for a healthier planet is a global effort, and it’s
+        our choice to protect the world for not only us but the generations that follow.
+      </p>
+    </section>
+
+    <!-- Section 4: Engineering Projects -->
+    <section class="projects-section">
+      <div class="section-heading-wrapper">
+        <h2 class="section-heading">Engineering Projects</h2>
+        <div class="section-divider"></div>
       </div>
 
       <div class="project-cards">
 
-        <article class="project-card animate-on-scroll">
+        <!-- Project 1: Solid-State Hydrogen-Powered Speedboat -->
+        <article class="project-card">
           <div class="project-content">
-            <div class="project-meta">Aug 2025 - May 2026 • CSUF</div>
-            <h3>Solid-State Hydrogen-Powered Speedboat</h3>
-            <p>This project explored the feasibility of using a solid-state hydrogen fuel cell as a clean energy
-              source for a radio-controlled speedboat prototype. The goal was to design and integrate a modular
-              hydrogen-electric propulsion system within a custom 3D-printed hull while balancing performance,
-              weight, cost, and energy efficiency. I took a leading role in the project by guiding the system design
-              process, coordinating the redesign decisions, and constructing the working prototype. Despite delays
-              during the design phase, the team successfully delivered a functioning prototype for the ECS Project
-              Innovation showcase. Water testing demonstrated that the boat was buoyant, maneuverable, and capable
-              of reaching an estimated top speed of 6 mph while powered by the hydrogen fuel cell system. Although
-              water leakage caused the main motor to degrade after initial testing, the project successfully
-              demonstrated the potential of solid-state hydrogen fuel cells in small-scale marine propulsion
-              applications. The final prototype provided valuable insight into the engineering tradeoffs associated
-              with hydrogen-powered systems and identified future improvements, including better waterproofing, hull
-              optimization, and the eventual integration of onboard hydrogen production.</p>
+            <div class="project-meta">SEP 2025 - MAY 2026 • CSUF Research & Capstone</div>
+            <h3 class="project-title">Solid-State Hydrogen-Powered Speedboat</h3>
+            <p class="project-description">
+              Researched and engineered a zero-emission watercraft powered by solid-state hydrogen storage and
+              high-performance fuel cell propulsion. Developed custom rapid-prototyped hull components, integrated power
+              distribution, and incorporated sensor telemetry for real-time vessel monitoring.
+            </p>
 
             <div class="project-gallery">
-              <img src="image0.jpg" alt="Hydrogen Speedboat Prototype 1" loading="lazy">
-              <img src="image1.jpg" alt="Hydrogen Speedboat Prototype 2" loading="lazy">
-              <img src="IMG_9277.jpg" alt="Hydrogen Speedboat Interior" loading="lazy">
-              <img src="IMG_8543.jpg" alt="Hydrogen Speedboat Fuel Cell" loading="lazy">
-              <img src="Screenshot 2026-05-26 212819.png" alt="Hydrogen Speedboat Block Diagram" loading="lazy">
-              <img src="image2.jpg" alt="Hydrogen Speedboat Group" loading="lazy">
+              <img src="image0.jpg" alt="Speedboat rendering & testing 1" loading="lazy">
+              <img src="image1.jpg" alt="Speedboat component assembly" loading="lazy">
+              <img src="IMG_9277.jpg" alt="Speedboat fabrication detail 1" loading="lazy">
+              <img src="IMG_8543.jpg" alt="Speedboat fabrication detail 2" loading="lazy">
+              <img src="Screenshot 2026-05-26 212819.png" alt="Speedboat CAD analysis screenshot" loading="lazy">
+              <img src="image2.jpg" alt="Speedboat hardware integration" loading="lazy">
             </div>
 
             <div class="project-tags">
@@ -205,52 +183,58 @@
           </div>
         </article>
 
-        <article class="project-card animate-on-scroll">
+        <!-- Project 2: RC Aircraft Delivery System -->
+        <article class="project-card">
           <div class="project-content">
-            <div class="project-meta">Sep 2024 - Apr 2025 • CSUF</div>
-            <h3>RC Aircraft Delivery System</h3>
-            <p>Contributed to the Controls sub-team for Titan Aero (SAE Aero Design competition). We designed a
-              radio-controlled aircraft capable of transporting a 40-lb payload. Involved in telemetry
-              configurations,
-              wire soldering, Solidworks FEA analysis, and operating laser cutters to complete the prototype in a
-              record 4 months.</p>
+            <div class="project-meta">Sep 2024 - Apr 2025 • Titan Aero</div>
+            <h3 class="project-title">RC Aircraft Delivery System</h3>
+            <p class="project-description">
+              Contributed to the Controls sub-team for Titan Aero (SAE Aero Design competition). Designed a
+              radio-controlled aircraft capable of transporting a 40-lb payload. Handled telemetry configurations, wire
+              soldering, Solidworks FEA stress analysis, and laser cutting to assemble the prototype in a record 4
+              months.
+            </p>
 
             <div class="project-gallery">
-              <img src="image.png" alt="Titan Aero image 1" loading="lazy">
-              <img src="TItan Aero1.jpg" alt="Titan Aero image 2" loading="lazy">
-              <img src="image2.png" alt="Titan Aero image 3" loading="lazy">
-              <img src="image1.png" alt="Titan Aero image 4" loading="lazy">
+              <img src="image.png" alt="Titan Aero Aircraft CAD model" loading="lazy">
+              <img src="TItan Aero1.jpg" alt="Titan Aero wing and fuselage assembly" loading="lazy">
+              <img src="image2.png" alt="Titan Aero field test setup" loading="lazy">
+              <img src="image1.png" alt="Titan Aero telemetry instrumentation" loading="lazy">
             </div>
 
             <div class="project-tags">
-              <span class="tag">Solidworks</span>
+              <span class="tag">Solidworks FEA</span>
               <span class="tag">Electronics & Telemetry</span>
               <span class="tag">Manufacturing</span>
+              <span class="tag">Prototyping</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card animate-on-scroll">
+        <!-- Project 3: Smith Machine Design -->
+        <article class="project-card">
           <div class="project-content">
             <div class="project-meta">Nov 2024 - Dec 2024 • CSUF</div>
-            <h3>Smith Machine Design</h3>
-            <p>Coordinated as Project Lead for a team of 3 to design an original Smith Machine assembly capable of
-              handling
-              a 4718 lbs static load. Developed a full drawing package adhering to ASME Y14.3/14.5 standards,
-              analyzing shear stress on safety mechanisms with a factor of safety of 10 applied to 1045 steel.</p>
+            <h3 class="project-title">Smith Machine Design</h3>
+            <p class="project-description">
+              Acted as Project Lead for a team of 3 to design an original Smith Machine assembly capable of handling a
+              4,718 lbs static load. Developed a comprehensive technical drawing package adhering strictly to ASME
+              Y14.3/14.5 standards, with shear stress analysis applied to 1045 steel safety mechanisms under a safety
+              factor of 10.
+            </p>
 
             <div class="project-gallery">
-              <img src="image6.png" alt="Smith Machine DWG 1" loading="lazy">
-              <img src="image5.png" alt="Smith Machine DWG 2" loading="lazy">
-              <img src="image3.png" alt="Smith Machine Render 1" loading="lazy">
-              <img src="image4.png" alt="Smith Machine Render 2" loading="lazy">
+              <img src="image6.png" alt="Smith Machine engineering drawing package" loading="lazy">
+              <img src="image3.png" alt="Smith Machine 3D assembly render" loading="lazy">
+              <img src="image4.png" alt="Smith Machine safety latch drawing" loading="lazy">
+              <img src="image5.png" alt="Smith Machine structural frame render" loading="lazy">
             </div>
 
             <div class="project-tags">
               <span class="tag">SolidWorks</span>
               <span class="tag">ASME Standards</span>
               <span class="tag">Stress Analysis</span>
-              <span class="tag">Project Mgmt</span>
+              <span class="tag">Project Management</span>
             </div>
           </div>
         </article>
@@ -258,73 +242,67 @@
       </div>
     </section>
 
-    <section id="experience" class="experience">
-      <div class="container animate-on-scroll">
-        <div class="section-header">
-          <h2>Experience & Leadership</h2>
-          <div class="line"></div>
-        </div>
+    <!-- Section 5: Outro & Mariachi -->
+    <section class="outro-section">
+      <p class="narrative-text story-outro">
+        If my story resonates with you, follow along to see how my journey unfolds!
+      </p>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h4>Mentee at Edwards Lifesciences</h4>
-              <h5>Big Brothers Big Sisters of Orange County</h5>
-              <p>Learned professional skills such as networking, resume building, and interviewing while gaining clarity
-                toward career goals.</p>
-            </div>
-          </div>
+      <div class="featured-image-wrapper">
+        <img src="mariachi.jpg" alt="Mariachi Titans performance celebration" class="featured-image">
+      </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h4>Secretary</h4>
-              <h5>Tau Beta Pi Engineering Honor Society</h5>
-              <p>Managed documents, communications, and the organization's social media presence to foster an
-                inclusive
-                community of engineering scholars.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h4>Project Assistant</h4>
-              <h5>Mariachi Titans</h5>
-              <p>Assisted in event planning, created promotional materials, and managed announcements to support
-                cultural expression and student engagement.</p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container animate-on-scroll center-text">
-        <h2 class="playfair">Let's connect.</h2>
-        <p class="contact-text">I'm always open to discussing new opportunities, sustainable engineering projects, or
-          simply sharing ideas. Feel free to reach out.</p>
-        <div class="contact-links">
-          <a href="mailto:brntlee020@gmail.com" class="btn btn-primary">Email Me</a>
-          <a href="https://www.linkedin.com/in/brentlee02" target="_blank" rel="noopener noreferrer"
-            class="btn btn-secondary">LinkedIn</a>
-        </div>
+      <div class="signoff-box">
+        <p class="signoff-salutation">Best wishes,</p>
+        <p class="signoff-name">Brent Lee</p>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="container footer-content">
-      <p>&copy; 2026 Brent Lee. All rights reserved.</p>
-    </div>
+  <!-- Footer with Last Edited Timestamp -->
+  <footer class="site-footer">
+    <p class="last-edited-text">This page was last edited on 10 November 2026, at 5:00 (UTC).</p>
   </footer>
 
-  <!-- Lightbox Overlay -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Close image popup">&times;</button>
-    <img class="lightbox-img" id="lightbox-img" src="" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
+  <!-- Popup 2-Column Gallery Modal -->
+  <div id="gallery-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Creative Works Gallery</h3>
+        <button id="close-gallery-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <p class="modal-tip">💡 Click any image to view it full screen width</p>
+      <div class="modal-gallery-grid">
+        <div class="gallery-item">
+          <img src="painting.jpg" alt="Painting artwork 1">
+        </div>
+        <div class="gallery-item">
+          <img src="painting2.jpg" alt="Painting artwork 2">
+        </div>
+        <div class="gallery-item">
+          <img src="crochet.jpg" alt="Handmade crochet creation 1">
+        </div>
+        <div class="gallery-item">
+          <img src="crochet2.jpg" alt="Handmade crochet creation 2">
+        </div>
+        <div class="gallery-item">
+          <img src="crochet3.jpg" alt="Handmade crochet creation 3">
+        </div>
+        <div class="gallery-item">
+          <img src="crochet4.jpg" alt="Handmade crochet creation 4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox / Full-Width Image Viewer -->
+  <div id="lightbox" class="lightbox-backdrop" aria-hidden="true">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close full view">&times;</button>
+      <img id="lightbox-img" src="" alt="Expanded Image" class="lightbox-image">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
   </div>
 
   <script src="main.js"></script>
